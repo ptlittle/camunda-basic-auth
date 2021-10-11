@@ -1,0 +1,39 @@
+# https://howtodoinjava.com/spring-boot2/logging/configure-logging-application-yml/
+logging:
+  level:
+    root: INFO
+    org.camunda: TRACE
+    org.springframework: TRACE
+#    org.springframework.web: INFO
+#    org.springframework.security: DEBUG
+#    org.springframework.security.oauth2: DEBUG
+
+#debug=true
+#trace=true
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./camunda-h2-database
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true
+
+  server:
+    port: 8080
+
+
+camunda.bpm:
+  authorization:
+    enabled: true
+  admin-user:
+# https://docs.camunda.org/manual/7.12/user-guide/process-engine/identity-service/#custom-whitelist-for-user-group-and-tenant-ids
+# [a-zA-Z0-9]+|camunda-admin
+    id: camunda2
+    password: fr1d8y
+  filter:
+    create: All tasks
+
+
+
