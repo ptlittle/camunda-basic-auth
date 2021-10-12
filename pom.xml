@@ -14,7 +14,7 @@
 	</parent>
 
 	<groupId>com.camunda.demo</groupId>
-	<artifactId>sso</artifactId>
+	<artifactId>basic-auth-sso</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>OAuth Login</name>
 	<description>Camunda secured by Spring Security 5.3 Oauth2 </description>
